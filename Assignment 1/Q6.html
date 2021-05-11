@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<!-- New HTML5 form autocomplete attribute and datalist element -->
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Q6</title>
+	</head>
+	
+	<body>
+	
+		<!-- turn autocomplete on -->
+		<form method = "post" autocomplete = "on">
+			
+			<p><label for = "txtList">Please enter a day of the week:
+				<input type = "text" id = "txtList" 
+					placeholder = "Select a day of the week" list = "dayofweek"/>
+				
+				<datalist id = "dayofweek">
+					<option value = "Sunday">
+					<option value = "Monday">
+					<option value = "Tuesday">
+					<option value = "Wednesday">
+					<option value = "Thursday">
+					<option value = "Friday">
+					<option value = "Saturday">
+				</datalist>
+				
+			</label></p>
+			
+			<p>
+				<!-- input types "submit" and "reset" insert -->
+				<!-- buttons for submitting and clearing the -->
+				<!-- form's contents, respectively -->
+				<input type = "submit" value = "Submit">
+				<input type = "reset" value = "Clear">
+			</p>
+			
+		</form>
+	</body>
+</html>
