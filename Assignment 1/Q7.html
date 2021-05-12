@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Q7</title>
+	</head>
+	
+	<body>
+		<h1>Website Registration Form</h1>
+		
+		<!-- turn autocomplete on -->
+		<form method = "post" autocomplete = "on">
+		
+		<!-- <input type = "text"> inserts a text field -->
+			<p><label>First Name:
+				<input name = "firstname" type = "text" size = "25" maxlength = "30">
+			</label></p>
+			
+			<p><label>Last Name:
+				<input name = "lastname" type = "text" size = "25" maxlength = "30">
+			</label></p>
+			
+			<p><label>Email Address:
+				<input name = "email" type = "text" size = "25" maxlength = "30">
+			</label></p>
+			
+			<!-- summary element represents a summary for the -->
+			<!-- content of the details element -->
+			<details>
+				<summary>Details</summary>
+				<p>Optional Survey Question:</p>
+				
+				<!-- <input type = "radio"> creates a radio button. -->
+				<p>
+					<strong>What's your year in the university?</strong><br>
+					<label><input name = "universityyear" type = "radio" value = "Notyet">Not yet in univeristy</label>
+					<label><input name = "universityyear" type = "radio" value = "Freshman">Freshman</label>
+					<label><input name = "universityyear" type = "radio" value = "Sophomore">Sophomore</label>
+					<label><input name = "universityyear" type = "radio" value = "Junior">Junior</label>
+					<label><input name = "universityyear" type = "radio" value = "Senior">Senior</label>
+					<label><input name = "universityyear" type = "radio" value = "Graduate">Graduate</label>
+				</p>
+			</details>	
+			
+			<p>
+				<!-- input types "submit" and "reset" insert -->
+				<!-- buttons for submitting and clearing the -->
+				<!-- form's contents, respectively -->
+				<input type = "submit" value = "Submit">
+				<input type = "reset" value = "Clear">
+			</p>		
+		</form>	
+	</body>
+</html>
