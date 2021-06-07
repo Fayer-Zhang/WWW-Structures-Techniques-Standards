@@ -1,0 +1,13 @@
+word              { text-decoration: none;
+					font-family: arial;
+					display: block;
+					color: white;
+					font-size: 18px;
+					font-weight: bold }
+div.button        { width: 160px;
+					text-align: center;
+					background-color: orange;
+					border: 3px solid purple }
+div.button:hover  { background-color: white;
+					border-color: purple }
+word:hover        { color: orange }

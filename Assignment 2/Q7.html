@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Q7</title>
+		
+		<style type = "text/css">
+			table { width: 100% }
+			th    { text-align: left }
+		</style>
+	  
+		<script>
+
+			var salesProd1 = 0; 
+			var salesProd2 = 0; 
+			var salesProd3 = 0;
+			var salesProd4 = 0;
+			var salesProd5 = 0;      
+			var productId = 0;
+			var inputString;
+		
+			while (productId !== -1){
+				inputString = window.prompt("Please enter product number 1-5 or enter -1 to exit" );
+				productId = parseInt( inputString );
+		        
+				if (productId >= 1 && productId <= 5)
+				{ 
+					inputString = window.prompt( "Please enter quantity sold:" );
+					var quantity = parseInt( inputString );
+					
+					switch (productId)
+					{
+						case 1:
+							salesProd1 += quantity * 2.98;
+							break;
+						case 2:
+							salesProd2 += quantity * 4.50;
+							break;
+						case 3:
+							salesProd3 += quantity * 9.98;
+							break;
+						case 4:
+							salesProd4 += quantity * 4.49;
+							break;
+						case 5:
+							salesProd5 += quantity * 6.87;
+							break;
+					}
+				}
+				
+				else if(productId != -1)
+				{
+					window.alert( "Error! Product number must be between 1 and 5");
+				}
+			} 
+
+			document.writeln( "<h2>Total Sales for Five Products</h2>" );
+			document.writeln( "<table border = '1'>" );
+			document.writeln( "<tr><th>Product #</th>" );
+			document.writeln( "<th>Total Sales</th></tr>" ); 
+			document.writeln( "<tr><td> Product 1 </td><td>" + salesProd1 
+							+ "</td>" + "<tr><td> Product 2 </td><td>" + salesProd2 
+							+ "</td></tr>" + "<tr><td> Product 3 </td><td>" + salesProd3 
+							+ "</td></tr>" +  "<tr><td> Product 4 </td><td>" + salesProd4 
+							+ "</td></tr>" +  "<tr><td> Product 5 </td><td>" + salesProd5 
+							+ "</td></tr></table>" );
+
+		</script>
+	</head> <body></body>
+</html>

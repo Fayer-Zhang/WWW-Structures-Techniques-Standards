@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   <head>
+		<meta charset = "utf-8">
+		<title>Q6</title>
+		
+		<script>
+
+        var number = window.prompt("Please enter a 5-digit integer" );
+
+		if (number <= 99999 && number >= 10000)
+		{
+            var digit1;
+			var digit2;
+			var digit4;
+			var digit5;
+
+			digit1 = parseInt( number / 10000 );
+			digit2 = parseInt( number % 10000 / 1000 );
+			digit4 = parseInt( number % 10000 % 1000 % 100 / 10 );
+			digit5 = parseInt( number % 10000 % 1000 % 100 % 10 );
+
+			if ( digit1 == digit5 )
+			{
+				if ( digit2 == digit4 )
+				{
+					document.writeln("<p>" + number + " is a palindrome.</p>");
+				}
+				else
+				{
+					document.writeln("<p>" + number + " is not a palindrome.</p>");
+				}
+			}
+			
+			else
+			{
+				document.writeln("<p>" + number + " is not a palindrome.</p>");
+			}
+		}
+		
+		else
+		{
+		   window.alert("Error! Please enter a 5-digit number");
+		}
+
+		</script>
+	</head> <body></body>
+</html>
