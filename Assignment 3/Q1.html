@@ -5,52 +5,51 @@
 		<meta charset = "utf-8">
 		<title>Q1</title>
 		<script>
-	  
-		document.writeln("<h1>Please enter the temperature </h1>");
-		
-		function start()
-		{
-			//celsius Button
-            document.getElementById( "celsius_button" ).addEventListener( "click", convertCelsius, false );
-            //fahrenheit Button
-            document.getElementById( "fahrenheit_button" ).addEventListener( "click", convertFahrenheit, false );
-		}
-		
-		//input: fTemp -> Fahrenheit temperature
-		//returns the Fahrenheit equivalent of a Celsius temperature(cTemp)
-		//Formula: C = 5.0/9.0*(F-32)
-		function celsius(fTemp)
-		{
-			cTemp = 5.0 / 9.0 * (fTemp-32);
-			return cTemp;
-		}
-		
-		//input: cTemp -> Celsius temperature
-		//returns the Fahrenheit equivalent of a Celsius temperature(fTemp)
-		//Formula: F = 9.0/5.0*C+32
-		function fahrenheit(cTemp)
-		{
-			fTemp = 9.0 / 5.0 * cTemp + 32;
-			return fTemp;
-		}
-		
-		//initiate the conversion from Fahrenheit to Celsius
-		function convertCelsius()
-		{
-			var input = document.getElementById("input");
-            var temp = parseFloat(input.value);
-            document.getElementById("converted_temperature").innerHTML = "The temperature you entered converted to Celsius is " + celsius(temp);
-		}
-		
-		//initiate the conversion from Celsius to Fahrenheit
-		function convertFahrenheit()
-		{
-			var input = document.getElementById("input");
-            var temp = parseFloat(input.value);
-            document.getElementById("converted_temperature").innerHTML = "The temperature you entered converted to Fahrenheit is " + fahrenheit(temp);
-		}
-		
-		window.addEventListener( "load", start, false );
+			document.writeln("<h1>Please enter the temperature </h1>");
+			
+			function start()
+			{
+				//celsius Button
+				document.getElementById( "celsius_button" ).addEventListener( "click", convertCelsius, false );
+				//fahrenheit Button
+				document.getElementById( "fahrenheit_button" ).addEventListener( "click", convertFahrenheit, false );
+			}
+			
+			//input: fTemp -> Fahrenheit temperature
+			//returns the Fahrenheit equivalent of a Celsius temperature(cTemp)
+			//Formula: C = 5.0/9.0*(F-32)
+			function celsius(fTemp)
+			{
+				cTemp = 5.0 / 9.0 * (fTemp-32);
+				return cTemp;
+			}
+			
+			//input: cTemp -> Celsius temperature
+			//returns the Fahrenheit equivalent of a Celsius temperature(fTemp)
+			//Formula: F = 9.0/5.0*C+32
+			function fahrenheit(cTemp)
+			{
+				fTemp = 9.0 / 5.0 * cTemp + 32;
+				return fTemp;
+			}
+			
+			//initiate the conversion from Fahrenheit to Celsius
+			function convertCelsius()
+			{
+				var input = document.getElementById("input");
+				var temp = parseFloat(input.value);
+				document.getElementById("converted_temperature").innerHTML = "The temperature you entered converted to Celsius is " + celsius(temp);
+			}
+			
+			//initiate the conversion from Celsius to Fahrenheit
+			function convertFahrenheit()
+			{
+				var input = document.getElementById("input");
+				var temp = parseFloat(input.value);
+				document.getElementById("converted_temperature").innerHTML = "The temperature you entered converted to Fahrenheit is " + fahrenheit(temp);
+			}
+			
+			window.addEventListener( "load", start, false );
         </script>
 		
 		<style>
