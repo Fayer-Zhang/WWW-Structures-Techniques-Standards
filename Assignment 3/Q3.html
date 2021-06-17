@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+        <meta charset = "utf-8">
+        <title>Q3</title>
+        <script>
+            document.writeln("<h1>Guess the number</h1>");
+			var answer = 0;
+			var count = 0;
+            
+			function start()
+			{
+				//pick a random integer in the range from 1 to 1000
+				answer = Math.floor(1 + Math.random() * 1000);
+				count = 0;
+				
+                var guess = document.getElementById("guess_button");
+                guess.addEventListener("click", displayResult, false);
+            }
+
+            function displayResult()
+			{
+                var display = document.getElementById("display");
+				var input = document.getElementById("input");
+                
+				//check if it is a number
+				if(isNaN(input.value) == false)
+				{
+					var guessVal = parseInt(input.value);
+					
+					//check if the range is betwwen 1 and 1000 
+					if (guessVal >= 1 && guessVal <= 1000)
+					{
+						++count;
+						
+						if (guessVal > answer)
+						{
+							display.innerHTML = "Too high. Try again.";
+						}
+						
+						else if (guessVal < answer)
+						{
+							display.innerHTML = "Too low. Try again.";
+						}	
+						
+						else 
+						{
+							
+							if (count < 10)
+							{
+								display.innerHTML = "Congratulations. You guessed the number!" + "<br/>"
+												  + "Either you know the secret or you got lucky!";
+							}
+							
+							else if (count == 10)
+							{
+								display.innerHTML = "Congratulations. You guessed the number!" + "<br/>"
+												  + "Ahah! You know the secret!";
+							}
+							
+							else
+							{
+								display.innerHTML = "Congratulations. You guessed the number!" + "<br/>"
+												  + "You should be able to do better!";
+							}
+							start();
+						}
+					}
+					
+					else
+					{
+						display.innerHTML = "Wrong input! You should enter a number between 1 and 1000.";
+					}
+				}
+				
+				else
+				{
+					display.innerHTML = "Wrong input! You should enter a number between 1 and 1000.";
+				}
+            }
+			
+            window.addEventListener("load", start, false);
+        </script>
+        
+		<style>
+            body {text-align: center;}
+        </style>
+
+    </head>
+
+    <body>        
+        <form action = "#">
+            <p><label>Guess a number between 1 and 1000 <input id = "input" type = "text"></label></p>
+            <p><input id = "guess_button" type = "button"  value = "Guess"></p>
+        </form>
+
+        <p id = "display"></p>
+    </body>
+</html>
