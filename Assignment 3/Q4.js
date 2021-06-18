@@ -17,6 +17,7 @@ function SieveEratosthenes(array)
 {
 	var primeArr = new Array();
 	
+	//Start with array index 2, because 0 and 1 are not primes
 	for(var i=2; i*i<1000; ++i)
 	{
 		if(array[i] == 1)
