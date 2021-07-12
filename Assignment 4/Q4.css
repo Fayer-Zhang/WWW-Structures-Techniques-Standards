@@ -1,0 +1,7 @@
+#picture   { 
+    position: absolute;
+    padding: 200px;
+    background-image: url("picture.jpg") ;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

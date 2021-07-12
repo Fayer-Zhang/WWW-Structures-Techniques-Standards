@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet href = "Q7b.xsl" type = "text/xsl" version = "1.0"?>
+
+<!-- contain elements describing the product name, serving size, calories, sodium, cholesterol, fat, protein-->
+<product name = "Grandma White&apos;s Cookies">
+
+	<servingsize>1 package</servingsize>
+
+	<calories>
+		<fat>100 calories</fat>
+		<total>260 calories</total>
+	</calories>
+   
+	<sodium>210 milligrams</sodium>
+   
+	<cholesterol>5 milligrams</cholesterol>
+   
+	<fat>
+		<saturated>2 grams</saturated>
+		<total>11 grams</total>
+      
+	</fat>
+   
+	<carbohydrates>
+		<fiber>2 grams</fiber>
+		<sugars>15 grams</sugars>
+		<total>36 grams</total>
+	</carbohydrates>
+
+	<protein>5 grams</protein>
+   
+</product>

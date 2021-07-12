@@ -1,0 +1,29 @@
+body
+{
+    text-align: center; 
+    font-family: monospace;
+}
+
+span  
+{
+    color: orange;
+    font-size: 2em;
+}
+
+table { 
+    border-collapse: collapse ;
+    display: inline-table;
+}
+
+td 
+{ 
+    border: 3px solid;
+    width: 5em;
+    height: 5em; 
+}
+
+.board
+{
+    margin-left: auto;
+    margin-right: auto;
+}
